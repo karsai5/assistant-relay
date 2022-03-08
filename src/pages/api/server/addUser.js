@@ -31,6 +31,7 @@ export default async (req, res) => {
     const url = oauthClient.generateAuthUrl({
       access_type: 'offline',
       scope: ['https://www.googleapis.com/auth/assistant-sdk-prototype'],
+      state: req.body.name,
     });
 
     logger.log('info', 'User Added - redirecting to sign in page', {

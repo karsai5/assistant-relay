@@ -2,8 +2,8 @@ import { post } from '../helpers/api';
 import Router from 'next/router';
 import React, { useState } from 'react';
 
-function AddToken({ user }) {
-  const [authCode, setAuthCode] = useState();
+function AddToken({ user, authCode: authCodeFromNav }) {
+  const [authCode, setAuthCode] = useState(authCodeFromNav);
 
   async function addUser() {
     try {
@@ -42,6 +42,7 @@ function AddToken({ user }) {
                 type="input"
                 name="ouathcode"
                 onChange={e => setAuthCode(e.target.value)}
+                value={authCode}
               />
             </div>
           </div>

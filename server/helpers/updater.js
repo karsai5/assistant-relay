@@ -121,5 +121,5 @@ exports.updater = function () {
     service: 'server',
     func: 'updater',
   });
-  autoupdater.fire('check');
+  // autoupdater.fire('check');
 };

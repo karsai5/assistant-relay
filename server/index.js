@@ -91,7 +91,7 @@ app.prepare().then(async () => {
 
     // Publish a bonjour service
     const service = bonjour.publish({
-      name: 'Assistant Relay',
+      name: 'Assistant Relay (localhost)',
       host: 'ar.local',
       type: 'http',
       port: port,
